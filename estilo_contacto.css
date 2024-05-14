@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif; /* Fuente predeterminada para el cuerpo del documento */
+    font-size: large; /*tamaño de la fuente del formulario */
+    background-image: url(./img/REDES.jpg);
+    /* imagen de fondo del cuerpo del documento */
+    margin: 0;
+    /* Elimina el margen exterior predeterminado del cuerpo del documento */
+    padding: 0;
+    /* Elimina el relleno predeterminado del cuerpo del documento */
+  }
+
+/* Estilos para el contenedor del formulario */
+.form-container {
+    max-width: 200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interno del contenedor */
+    border: 1px solid #d1b16d; /* Borde del contenedor */
+    border-radius: 5px; /* Radio de borde para bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #9fcfdb; /* Color de fondo del formulario */
+    margin-bottom: 120px;
+  
+}
+
+/* Estilos para el grupo de elementos del formulario */
+.form-group {
+    margin-bottom: 10px; /* Espaciado inferior entre grupos */
+}
+
+/* Estilos para las etiquetas de los campos del formulario */
+label {
+    display: block; /* Mostrar las etiquetas en bloques separados */
+    font-weight: bold; /* Fuente en negrita para resaltar */
+    margin-bottom: 5px; /* Espaciado inferior entre etiquetas */
+}
+
+/* Estilos para los campos de texto, email y select */
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%; /* Ancho completo del contenedor */
+    padding: 8px; /* Espaciado interno del campo */
+    border: 1px solid #ccc; /* Borde del campo */
+    border-radius: 3px; /* Radio de borde para bordes redondeados */
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
+}
+
+/* Estilos para el campo de texto multilinea (textarea) */
+textarea {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 100px; /* Altura fija del campo */
+    padding: 8px; /* Espaciado interno del campo */
+    border: 1px solid #ccc; /* Borde del campo */
+    border-radius: 6px; /* Radio de borde para bordes redondeados */
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
+}
+
+/* Estilos para el botón de enviar */
+input[type="submit"] {
+    padding: 10px 30px; /* Espaciado interno del botón */
+    background-color: rgb(208, 71, 208); /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 3px; /* Radio de borde para bordes redondeados */
+    cursor: pointer; /* Cursor al pasar sobre el botón */
+}
+
+/* Estilos para el botón de enviar al pasar el mouse */
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Cambio de color de fondo */
+}
+
+/* Estilos para mensajes de error */
+.error-message {
+    color: red; /* Color rojo para mensajes de error */
+    margin-top: 5px; /* Espaciado superior para separación */
+}
+
+/* Media queries para diseño responsive */
+@media (max-width: 600px) {
+    /* Estilos para dispositivos de hasta 600px de ancho (Celular) */
+    body {
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+    }
+    .form-container {
+        max-width: 100%; /* Ancho máximo en dispositivos móviles */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* Estilos para dispositivos entre 600px y 1024px de ancho (Tablet) */
+    body {
+        font-size: 16px; /* Tamaño de fuente mediano */
+    }
+    .form-container {
+        max-width: 80%; /* Ancho máximo en tablets */
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Estilos para dispositivos mayores a 1024px de ancho (PC escritorio) */
+    body {
+        font-size: 18px; /* Tamaño de fuente más grande */
+    }
+    .form-container {
+        max-width: 60%; /* Ancho máximo en PC de escritorio */
+    }
+}
+
+/* Estilos para el icono de hamburguesa */
+.mostrar-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+  }
+  
+  /* Estilos para ocultar el checkbox */
+  .check {
+    display: none;
+  }
+  
+  /* Estilos para el menú */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Inicialmente oculto */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 90px; /* Espacio para el icono de hamburguesa */
+    transition: right 0.4s; /* Transición suave al mostrar/ocultar */
+  }
+  
+  .menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menu a:hover {
+    background-color: #f0c03c;
+  }
+  
+  /* Mostrar el menú cuando el checkbox está marcado */
+  #check:checked ~ .menu {
+    right: 0;
+  }

@@ -1,0 +1,284 @@
+body {
+    font-family: Arial, sans-serif; /* Fuente predeterminada para el cuerpo del documento */
+    font-size: large; /*tamaño de la fuente del formulario */
+    background-image: url(./img/palitos.jpg);
+    /* imagen de fondo del cuerpo del documento */
+    margin: 0;
+    /* Elimina el margen exterior predeterminado del cuerpo del documento */
+    padding: 0;
+    /* Elimina el relleno predeterminado del cuerpo del documento */
+  }
+  
+  /* Estilos para el contenedor principal */
+  .container {
+    width: 80%;
+    /* Ancho del contenedor principal */
+    max-width: 750px;
+    /* Ancho máximo del contenedor principal */
+    margin: 140px auto;
+    /* Margen superior e inferior automático y margen izquierdo y derecho automáticos para centrar el contenedor */
+    padding: 35px;
+    /* Relleno dentro del contenedor */
+    background-color: #ffffff;
+    /* Color de fondo del contenedor */
+    border-radius: 5px;
+    /* Radio de borde para suavizar las esquinas del contenedor */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra para el contenedor */
+  
+    /* Propiedades para la imagen de fondo */
+    background-image: url(./img/torta2.jpg);/* Ruta a tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-position: center;  /* posiciona la imagen del formulario, al centro */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita y que quede centrada */
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media screen and (max-width: 600px) {
+    .container {
+      width: 90%; /* Cambia el ancho del contenedor para pantallas pequeñas */
+      margin: 50px auto; /* Cambia el margen para pantallas pequeñas */
+    }
+  }
+  
+  /* Estilos para el encabezado h1 */
+  h1 {
+    text-align: center;
+    /* Centra el texto del encabezado h1 */
+  }
+  
+  /* Estilos para el formulario */
+  form {
+    display: grid;
+    /* Utiliza el modelo de diseño de cuadrícula para el formulario */
+    grid-gap: 10px;
+    /* Espacio entre las celdas de la cuadrícula */
+  }
+  
+  /* Estilos para las etiquetas */
+  label {
+    font-weight: bold;
+    /* Establece el peso de la fuente en negrita para las etiquetas */
+  }
+  
+  /* Estilos para los elementos de entrada, selección y área de texto */
+  input,
+  select,
+  textarea {
+    width: 100%;
+    /* Establece el ancho al 100% para que ocupen todo el ancho del contenedor */
+    padding: 8px;
+    /* Relleno dentro de los elementos de entrada */
+    box-sizing: border-box;
+    /* Incluye el relleno y el borde en el ancho total del elemento */
+    border: 1px solid #ccc;
+    /* Borde delgada y sólida con un color gris claro */
+    border-radius: 4px;
+    /* Radio de borde para suavizar las esquinas de los elementos */
+  }
+  
+  
+  /* Estilos para el botón de enviar */
+  input[type="submit"] {
+    background-color: #954caf;
+    /* Color de fondo para el botón de enviar */
+    color: white;
+    /* Color de texto para el botón de enviar */
+    border: none;
+    /* Sin borde para el botón de enviar */
+    border-radius: 4px;
+    /* Radio de borde para suavizar las esquinas del botón de enviar */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el botón de enviar */
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #a04585;
+    /* Cambia el color de fondo al pasar sobre el botón de enviar */
+  }
+  
+  /* Estilos para el contenedor de la casilla de verificación y el texto */
+  .checkbox-label {
+    display: inline-flex;
+    /*se utiliza incline-flex en lugar de flex*/
+    align-items: center;
+    /* Centra verticalmente los elementos dentro de la caja flexible */
+    margin-top: 10px;
+    /* Espacio superior */
+  }
+  
+  .recibir {
+    display: flex;
+    /* Cambia el comportamiento de visualización a una caja flexible para el contenedor de la casilla de verificación y el texto */
+  }
+  
+  .recibir input {
+    flex-shrink: 30;
+    /* Controla cómo se deben reducir los elementos flexibles en el eje principal */
+    width: 25px;
+    /* Establece un ancho fijo para el elemento de entrada de la casilla de verificación */
+  
+  }
+  
+  .recibir p {
+    flex-shrink: 0;
+    /* Evita que el texto se reduzca en el eje principal */
+  }
+  
+  /* Estilos para el botón de leer formulario */
+  .button {
+    padding: 10px 20px;
+    /* Añade relleno al botón */
+    background-color: #954caf;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto del botón */
+    border: none;
+    /* Sin borde para el botón */
+    border-radius: 40px;
+    /* Borde redondeado para el botón */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+    position: absolute;
+    /* Establece la distancia desde el borde derecho del contenedor */
+    right: 380px;
+    /* Establece la distancia desde el borde superior del contenedor */
+    top:15px;
+    transition: background-color 0.1s;
+    /* Agrega una transición suave */
+  }
+  
+  /* Media query para el botón de leer formulario en pantallas pequeñas */
+  @media screen and (max-width: 600px) {
+    button {
+      right: 50%; /* Centra el botón horizontalmente en pantallas pequeñas */
+      transform: translateX(50%); /* Centra el botón horizontalmente en pantallas pequeñas */
+    }
+  }
+  
+  /* Cambia el color de fondo al pasar sobre el botón leer formulario y enviar consulta rapida */
+  .button:hover {
+    background-color: #a04585;
+  }
+  
+  /*estilo de frase*/
+  
+  .frase {
+    text-align: center;
+    padding: 50px 0; /* Ajusta el padding para mover el texto más arriba */
+    background-image: url(./img/ai-genero-imagen-pastel_23-2150649274.jpg);
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    display: flex; /* Utiliza flexbox para alinear el contenido */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Alinea los elementos al centro horizontalmente */
+    height: 100vh; /* Establece la altura del contenedor igual al alto de la ventana */
+    margin-bottom: 140px; /* Espacio entre el contenido y el footer */
+  }
+  
+  
+  /* Estilos para el footer */
+  footer {
+    background-color: #D9CBA3;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas */
+    grid-template-rows: auto;
+    /* Altura automática */
+    gap: 60px;
+    /* Espacio entre elementos */
+  }
+  
+  /* Estilos para cada elemento del footer */
+  .footer-item {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Color blanco con 70% de opacidad */
+    border-radius: 10px;
+  }
+  
+  /* Estilos para ls seccion de mapa en el  footer */
+  .map {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Color blanco con 70% de opacidad */
+    border-radius: 10px;
+  }
+  
+  
+  /* Estilos para el texto de derechos reservados */
+  .footer-copyright {
+    text-align: center;
+    grid-column: 1 / span 4;
+    /* Ocupa las 4 columnas */
+    grid-row: 2;
+    /* Está en la segunda fila */
+    background-color: #ffcc54;
+    border: 1px solid #dddddd;
+    padding: 10px;
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media screen and (max-width: 600px) {
+    footer {
+      grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+      gap: 10px; /* Reduce el espacio entre elementos en pantallas pequeñas */
+    }
+  }
+  
+  .resaltar {
+    font-weight: bold;
+    color: red;
+  }
+  
+  /* Estilos para el icono de hamburguesa */
+  .mostrar-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+  }
+  
+  /* Estilos para ocultar el checkbox */
+  .check {
+    display: none;
+  }
+  
+  /* Estilos para el menú */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Inicialmente oculto */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 90px; /* Espacio para el icono de hamburguesa */
+    transition: right 0.4s; /* Transición suave al mostrar/ocultar */
+  }
+  
+  .menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menu a:hover {
+    background-color: #f0c03c;
+  }
+  
+  /* Mostrar el menú cuando el checkbox está marcado */
+  #check:checked ~ .menu {
+    right: 0;
+  }
+  
+  
+  

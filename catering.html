@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es"><!-- Inicio del documento HTML con idioma español -->
+
+  <head> <!-- Contenido del encabezado (header) -->
+    <meta charset="UTF-8">
+    <!-- Configuración del conjunto de caracteres UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configuración de la escala inicial para dispositivos móviles -->
+    <title>Formulario de Contacto de Catering</title><!-- Título de la página -->
+    <link rel="stylesheet" href="estilo_catering.css"><!-- Enlace a la hoja de estilos externa "style.css" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--esta línea de código enlaza la hoja de estilo de Font Awesome, lo que permite utilizar los iconos de Font Awesome en la página web mediante clases CSS específicas.  -->
+
+    
+
+  </head>
+
+  <body>
+    <header>
+     <!-- Agrega un checkbox para controlar la visibilidad del menú hamburguesa-->
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">
+          <i class="fas fa-bars"></i>
+        </label>
+
+      <!--Menú hamburguesa-->
+        <div class="menu">
+          <!-- Menú de navegación -->
+          <a href="http://127.0.0.1:5500/prueba2/index.html">Incio</a>
+          <!-- Enlace al inicio -->
+          <a href="http://127.0.0.1:5500/prueba2/productos.html">Productos</a>
+          <!-- Enlace a la página "productos" -->
+          <a href="http://127.0.0.1:5500/prueba2/formulario_contacto.html">Contacto</a>
+          <!-- Enlace al co.htmlntacto -->
+          <a href="http://127.0.0.1:5500/prueba2/Catering.html">Servicio de Catering</a>
+          <!-- Enlace al formulario -->
+        </div> 
+    </header>
+
+    <main>
+      <div class="container"> <!-- Contenedor principal del formulario -->
+        <h1>Solicitar Servicio de Catering</h1> <!-- Encabezado principal del formulario -->
+        <form action="#" method="post"><!-- Formulario que enviará los datos mediante el método POST al servidor.
+                El atributo 'action' especifica la URL a la que se enviarán los datos, 
+                en este caso, '#' indica que los datos se enviarán a la misma página actual.
+                El atributo 'method' especifica el método HTTP que se usará para enviar los datos,
+                en este caso, 'post' indica que se utilizará el método POST. -->
+          <label for="nombre">Nombre y Apellido:</label> <!-- Etiqueta y campo de entrada para el nombre -->
+          <input type="text" id="nombre" name="nombre" required> <!-- Campo de texto obligatorio para el nombre -->
+
+          <label for="ocasion">¿Cuál es la ocasión?</label> <!-- Etiqueta y campo de entrada para la ocasión -->
+          <input type="text" id="ocasion" name="ocasion" required><!-- Campo de texto obligatorio para la ocasión -->
+
+          <label for="personas">Cantidad de personas:</label>
+          <!-- Etiqueta y campo de entrada para la cantidad de personas -->
+
+          <input type="number" id="personas" name="personas" required>
+          <!-- Campo numérico obligatorio para la cantidad de personas -->
+
+
+          <label for="tipo">Tipo de servicio:</label> <!-- Etiqueta y campo de selección para el tipo de servicio -->
+          <select id="tipo" name="tipo" required> <!-- Menú desplegable obligatorio para el tipo de servicio -->
+            <option value="" selected disabled hidden>Selecciona un tipo de servicio</option>
+            <!-- Opción de marcador de posición -->
+            <option value="completo">Catering de día completo</option> <!-- Opción para catering de día completo -->
+            <option value="almuerzo">Almuerzo</option> <!-- Opción para almuerzo -->
+            <option value="Merienda">Merienda</option> <!-- Opción para Merienda -->
+            <option value="cena">Cena</option> <!-- Opción para Cena -->
+            <option value="otros">Otros</option> <!-- Opción para otros tipos de servicio -->
+          </select>
+
+          <label for="restricciones">Restricciones dietéticas:</label>
+          <!-- Etiqueta y campo de entrada para las restricciones dietéticas -->
+          <input type="text" id="restricciones" name="restricciones">
+          <!-- Campo de texto para las restricciones dietéticas -->
+
+          <label for="fecha">Fecha del evento:</label> <!-- Etiqueta y campo de entrada para la fecha del evento -->
+          <input type="date" id="fecha" name="fecha" required>
+          <!-- Campo de fecha obligatorio para la fecha del evento -->
+
+          <label for="telefono">Número de Telefono:</label>
+          <!-- Etiqueta y campo de entrada para el número de teléfono -->
+          <input type="tel" id="telefono" name="telefono" required>
+          <!-- Campo de teléfono obligatorio para el número de teléfono -->
+
+          <label for="email">Correo Electrónico:</label> <!-- Etiqueta y campo de entrada para el correo electrónico -->
+          <input type="email" id="email" name="email" required>
+          <!-- Campo de correo electrónico obligatorio para el correo electrónico -->
+
+          <label for="mensaje">¿Tienes alguna idea para hacer nuestra experiencia aún mejor? (Opcional)</label>
+          <!-- Etiqueta y campo de entrada para el mensaje -->
+          <textarea id="mensaje" name="mensaje"></textarea> <!-- Campo de texto obligatorio para el mensaje -->
+
+          <label for="adjuntar">Adjuntar Archivo (Opcional):</label>
+          <!-- Etiqueta y campo de entrada para adjuntar archivos -->
+          <input type="file" id="adjuntar" name="adjuntar"> <!-- Campo para adjuntar archivos -->
+
+          <label class="checkbox-label recibir">
+            <!-- Etiqueta y casilla de verificación para recibir contenido adicional -->
+            <input type="checkbox" id="contenido-adicional" name="contenido-adicional" value="si">
+            <span> Sí, deseo recibir contenido adicional sobre nuestro e-commerce? </span> <!-- Texto descriptivo -->
+          </label> <br><br>
+
+          <label class="checkbox-label recibir">
+            <!-- Etiqueta y casilla de Acepto los términos y condiciones -->
+            <input type="checkbox" id="terminos" name="terminos" value="si" required>
+            <span> Acepto los términos y condiciones </span> <!-- Texto descriptivo -->
+            <a href="http://127.0.0.1:5500/TerminosYcondiciones.html">Términos y Condiciones</a>
+          </label> <br><br>
+
+          <input type="submit" value="Enviar Consulta Rápida">
+          <!-- Botón de envío del formulario -->
+        </form>
+      </div>
+    </main>
+
+
+     
+    <button onclick="leerFormulario()">Leer formulario</button><!-- Botón para activar la lectura del formulario -->
+
+
+    <script>
+      //Función para leer el contenido del formulario en voz alta
+      function leerFormulario() {
+        // Selecciona el formulario
+        const formulario = document.querySelector('form');
+        // Obtiene todos los elementos dentro del formulario (etiquetas, inputs, selects, textareas)
+        const elementos = formulario.querySelectorAll('label, input, select, textarea');
+
+        let texto = '';
+        // Concatena el texto de cada elemento en el formulario
+        elementos.forEach(elemento => {
+          texto += elemento.textContent + ' ';
+        });
+
+        // Utiliza la API de Speech Synthesis para leer el texto en voz alta
+        const synth = window.speechSynthesis;
+        const utterance = new SpeechSynthesisUtterance(texto);
+        synth.speak(utterance);
+      }
+    </script> <!-- Cierre del script -->
+
+    <div class="frase">
+      <h3>TE INVITAMOS A PASAR POR NUESTRO LOCAL</h3>
+      <h4>Y probar nuestros productos</h4>
+      <p>Postres, tortas, panes, masitas, bizcochos, tartas saladas, alfajores y muchos más.</p>
+      <p>Todos nuestros productos son elaborados por nosotros y totalmente artesanales.</p>
+    </div>
+
+    <footer>
+      <div class="footer-item">
+        <h3>ENVÍOS A CABA Y GBA CONSULTA SI LLEGAMOS A TU ZONA</h3>
+        <p>Hacé tu pedido y te lo entregamos en 48HS </p>
+        <p>Horario de atención: Todos los días de 9 a 20:30 hs.</p>
+        <img src="./img/delivery.png" alt="Formas de envío" style="width: 310px;">
+        <p>Defensa de las y los consumidores. Para reclamos,ingresá<a
+            href="https://autogestion.produccion.gob.ar/consumidores" target="_blank"> Acá</a>.</p>
+      </div>
+
+      <div class="footer-item">
+        <h3>SOBRE NOSOTROS</h3>
+        <p>Nuestra empresa consiste en la elaboración y venta de tortas pasteles,sandwicheria y mucho más:
+          Está conformada por un grupo de personas con un solo objetivo…hacer cosas ricas.
+          Cada día nos esforzamos por hacer productos caseros y de gran calidad, los cuales hacen la diferencia que
+          nuestros clientes prefieren.
+          Ofrecemos calidad y cariño en cada producto que elaboramos.Todo nuestros productos de pastelería son artesanales
+          y, al tratarse de alimentos, no se aceptan cambios ni
+          devoluciones.<br>En caso de que tengas un error en tu pedido escribinos a <a>
+            info.pasteleriaartesalhoochgala@gmail.com</a> para encontrar una solución lo antes
+          posible.</p>
+      </div>
+          <!-- Contenido del footer -->
+      <div class="footer-item">
+        <h3>PAGA COMO QUIERAS</h3>
+        <p>Tus datos siempre protegidos</p>
+        <img src="./img/tarjetas2.png" alt="MediosdePago">
+        <hr>
+        
+          <h2>Síguenos en nuestras redes sociales</h2>
+          <a href="https://www.facebook.com/profile.php?id=61559249051197">
+              <img src="./img/facebook_5968764.png" alt="facebook">
+          </a>
+
+          <a href="https://www.facebook.com/profile.php?id=61559249051197">
+              <img src="./img/instagram_2111463.png" alt="instagram">
+          </a>
+
+          <a href="https://www.facebook.com/profile.php?id=61559249051197">
+              <img src="./img/twitter_5969020.png" alt="twitter">
+          </a>
+      </div>
+
+      <div class="map">
+        <h3>ENCONTRANOS AQUI</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.599056082831!2d-58.39766452339284!3d-34.589010356723065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca987d053485%3A0x4a4df37528573659!2sAv.%20Gral.%20Las%20Heras%202129%2C%20C1127%20AAD%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1715134540013!5m2!1ses-419!2sar"
+          width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
+      </div>
+
+      &copy; 2024 Pastelería Artesanal Hooch Gala / Todos los derechos reservados
+    </footer>
+    
+  </body>
+
+</html>

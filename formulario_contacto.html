@@ -1,0 +1,109 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento -->
+<html lang="es"> <!-- Inicio de la etiqueta html con idioma español -->
+
+<head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Escalado inicial y tamaño del viewport -->
+    <title>PASTELERIA ARTESANAL HOOCH GALA</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="estilo_contacto.css"> <!-- Enlace a la hoja de estilos personalizada -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Enlace al conjunto de iconos de Font Awesome -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Script para cargar el reCAPTCHA de Google de forma asíncrona -->
+    <link rel="icon" href="ruta/a/tu/icono.ico" type="image/x-icon">
+    
+</head>
+
+<body>
+    <header>
+        <!-- Enlace al icono de la pestaña del navegador -->
+        <input type="checkbox" id="check">
+        <!-- Checkbox para mostrar/ocultar el menú hamburguesa en dispositivos móviles -->
+        <label for="check" class="mostrar-menu"> <!-- Icono para mostrar el menú hamburguesa -->
+            <i class="fas fa-bars"></i> <!-- Icono de las barras del menú -->
+        </label>
+        <div class="menu"> <!-- Menú hamburguesa -->
+            <a href="http://127.0.0.1:5500/prueba2/index.html">Inicio</a> <!-- Enlace al inicio -->
+            <a href="http://127.0.0.1:5500/prueba2/productos.html">Productos</a> <!-- Enlace a la página de productos -->
+            <a href="http://127.0.0.1:5500/prueba2/formulario_contacto.html">Contacto</a>
+            <!-- Enlace a la página de contacto -->
+            <a href="http://127.0.0.1:5500/prueba2/Catering.html">Servicio de Catering</a>
+            <!-- Enlace al formulario de catering -->
+        </div>  
+    </header>
+    <div class="form-container"> <!-- Contenedor del formulario de contacto -->
+        <h2>Formulario de Contacto</h2> <!-- Título del formulario -->
+        <form id="contact-form" method="post" action="#"> <!-- Formulario de contacto -->
+            <div class="form-group"> <!-- Grupo de campos -->
+                <label for="nombre">Nombre:</label> <!-- Etiqueta para el campo de nombre -->
+                <input type="text" id="nombre" name="nombre" required> <!-- Campo de texto para el nombre -->
+            </div>
+            <div class="form-group"> <!-- Grupo de campos -->
+                <label for="apellido">Apellido:</label> <!-- Etiqueta para el campo de apellido -->
+                <input type="text" id="apellido" name="apellido" required> <!-- Campo de texto para el apellido -->
+            </div>
+            <div class="form-group"> <!-- Grupo de campos -->
+                <label for="email">Email:</label> <!-- Etiqueta para el campo de email -->
+                <input type="email" id="email" name="email" required> <!-- Campo de texto para el email -->
+            </div>
+            <div class="form-group"> <!-- Grupo de campos -->
+                <label for="localidad">Localidad:</label> <!-- Etiqueta para el campo de localidad -->
+                <input type="text" id="localidad" name="localidad" required> <!-- Campo de texto para la localidad -->
+            </div>
+            <div class="form-group"> <!-- Grupo de campos -->
+                <label for="mensaje">Mensaje:</label> <!-- Etiqueta para el campo de mensaje -->
+                <textarea id="mensaje" name="mensaje"></textarea> <!-- Área de texto para el mensaje -->
+            </div>
+            <div class="form-group"> <!-- Grupo de campos -->
+                <label for="motivo">Motivo de contacto:</label> <!-- Etiqueta para el campo de motivo de contacto -->
+                <select id="motivo" name="motivo" required>
+                    <!-- Lista desplegable para seleccionar el motivo de contacto -->
+                    <option value="">Selecciona un motivo</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="solicitar_informacion">Solicitar Información</option>
+                </select>
+            </div>
+            <div class="form-group"> <!-- Grupo de campos -->
+                <label>¿Cómo se enteró de nosotros?</label><br> <!-- Etiqueta para el grupo de opciones -->
+                <input type="radio" id="web" name="web" value="paginas_web"> <!-- Opción para páginas web -->
+                <label for="web">Páginas Web</label><br>
+                <input type="radio" id="avisos" name="avisos" value="avisos_ocasion">
+                <!-- Opción para avisos de ocasión -->
+                <label for="avisos">Avisos de Ocasión</label><br>
+                <input type="radio" id="recomendaciones" name="recomendaciones" value="recomendaciones">
+                <!-- Opción para recomendaciones -->
+                <label for="recomendaciones">Recomendaciones</label><br>
+                <input type="radio" id="lugar" name="lugar" value="pase_por_el_lugar">
+                <!-- Opción para pase por el lugar -->
+                <label for="lugar">Pase por el Lugar</label><br>
+                <input type="radio" id="redes" name="redes" value="redes_sociales"> <!-- Opción para redes sociales -->
+                <label for="redes">Redes Sociales</label><br>
+            </div>
+            <div class="captcha"> <!-- Grupo de campos -->
+                <div class="g-recaptcha" data-sitekey="6Lf6fr0pAAAAAJ-mFUBjFR3jaf-VFazX1c8lGeB-"
+                    style="margin:auto; max-width:305px;"></div> <!-- Div para mostrar el reCAPTCHA -->
+            </div>
+            <div class="form-group"> <!-- Grupo de campos -->
+                <input type="submit" value="Enviar Datos"> <!-- Botón de envío del formulario -->
+            </div>
+            <script>
+                // Script para validar los campos obligatorios del formulario
+                document.getElementById('contact-form').addEventListener('submit', function (event) {
+                    var nombre = document.getElementById('nombre').value.trim();
+                    var apellido = document.getElementById('apellido').value.trim();
+                    var email = document.getElementById('email').value.trim();
+                    var localidad = document.getElementById('localidad').value.trim();
+
+                    if (nombre === '' || apellido === '' || email === '' || localidad === '') {
+                        alert('Por favor, complete todos los campos obligatorios.');
+                        event.preventDefault();
+                    }
+                });
+            </script>
+        </form>
+    </div>
+</body>
+
+</html>

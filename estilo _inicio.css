@@ -1,0 +1,146 @@
+/* Estilo para el header */
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0c03c;
+    color: rgb(17, 0, 0);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* Asegura que el header esté por encima de otros elementos */
+}
+
+
+/* Estilo para el logo */
+.logo {
+    width: 120px;
+    /* Ajusta el ancho según tu logo */
+}
+
+/* Estilos para el icono de hamburguesa */
+.mostrar-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+/* Estilos para ocultar el checkbox */
+.check {
+    display: none;
+}
+
+/* Estilos para el menú */
+.menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    /* Inicialmente oculto */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 90px;
+    /* Espacio para el icono de hamburguesa */
+    transition: right 0.4s;
+    /* Transición suave al mostrar/ocultar */
+}
+
+.menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #f0c03c;
+}
+
+/* Mostrar el menú cuando el checkbox está marcado */
+#check:checked~.menu {
+    right: 0;
+}
+
+.body {
+    font-family: Arial, sans-serif;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Usa un layout flexbox */
+    justify-content: center;
+    /* Centra horizontalmente los elementos */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    min-height: 100vh;
+    /* Establece una altura mínima para cubrir toda la pantalla */
+}
+
+/*Banner del gif del inicio*/
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* 100% del viewport height */
+    background-image: url(./img/inicio.gif);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/*estilo para el texto del giff*/
+.contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semi-transparente para el texto */
+}
+
+.contenido h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.contenido p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+/*estilo para las tres secciones de abajo "quienes somos" "nuestra sucursal" "Red Social"*/
+.container {
+    position: absolute;
+    bottom: 0;
+    /* Ubica el contenedor al pie del GIF */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Fondo semi-transparente para las secciones */
+}
+
+.section {
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    /* Fondo blanco para las secciones */
+}
