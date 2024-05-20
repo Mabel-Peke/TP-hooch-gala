@@ -126,9 +126,24 @@ body {
     /* Evita que el texto se reduzca en el eje principal */
   }
   
+  
+  
+  /* Media query para el botón de leer formulario en pantallas pequeñas */
+  @media screen and (max-width: 600px) {
+    button {
+      right: 50%; /* Centra el botón horizontalmente en pantallas pequeñas */
+      transform: translateX(50%); /* Centra el botón horizontalmente en pantallas pequeñas */
+    }
+  }
+  
+  /* Cambia el color de fondo al pasar sobre el botón leer formulario y enviar consulta rapida */
+  .button:hover {
+    background-color: #a04585;
+  }
+
   /* Estilos para el botón de leer formulario */
   .button {
-    padding: 10px 20px;
+    padding: 15px 40px;
     /* Añade relleno al botón */
     background-color: #954caf;
     /* Color de fondo del botón */
@@ -147,19 +162,6 @@ body {
     top:15px;
     transition: background-color 0.1s;
     /* Agrega una transición suave */
-  }
-  
-  /* Media query para el botón de leer formulario en pantallas pequeñas */
-  @media screen and (max-width: 600px) {
-    button {
-      right: 50%; /* Centra el botón horizontalmente en pantallas pequeñas */
-      transform: translateX(50%); /* Centra el botón horizontalmente en pantallas pequeñas */
-    }
-  }
-  
-  /* Cambia el color de fondo al pasar sobre el botón leer formulario y enviar consulta rapida */
-  .button:hover {
-    background-color: #a04585;
   }
   
   /*estilo de frase*/

@@ -12,8 +12,8 @@
     <!-- Enlace al conjunto de iconos de Font Awesome -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Script para cargar el reCAPTCHA de Google de forma asíncrona -->
-    <link rel="icon" href="ruta/a/tu/icono.ico" type="image/x-icon">
-    
+    <link rel="icon" href="./img/favicon.jpg" type="image/x-icon">
+
 </head>
 
 <body>
@@ -25,85 +25,148 @@
             <i class="fas fa-bars"></i> <!-- Icono de las barras del menú -->
         </label>
         <div class="menu"> <!-- Menú hamburguesa -->
-            <a href="http://127.0.0.1:5500/prueba2/index.html">Inicio</a> <!-- Enlace al inicio -->
-            <a href="http://127.0.0.1:5500/prueba2/productos.html">Productos</a> <!-- Enlace a la página de productos -->
-            <a href="http://127.0.0.1:5500/prueba2/formulario_contacto.html">Contacto</a>
+            <a href="http://127.0.0.1:5500/index.html">Inicio</a> <!-- Enlace al inicio -->
+            <a href="http://127.0.0.1:5500/productos.html">Productos</a> <!-- Enlace a la página de productos -->
+            <a href="http://127.0.0.1:5500/formulario_contacto.html">Contacto</a>
             <!-- Enlace a la página de contacto -->
-            <a href="http://127.0.0.1:5500/prueba2/Catering.html">Servicio de Catering</a>
+            <a href="http://127.0.0.1:5500/catering.html">Servicio de Catering</a>
             <!-- Enlace al formulario de catering -->
-        </div>  
+        </div>
     </header>
-    <div class="form-container"> <!-- Contenedor del formulario de contacto -->
-        <h2>Formulario de Contacto</h2> <!-- Título del formulario -->
-        <form id="contact-form" method="post" action="#"> <!-- Formulario de contacto -->
-            <div class="form-group"> <!-- Grupo de campos -->
-                <label for="nombre">Nombre:</label> <!-- Etiqueta para el campo de nombre -->
-                <input type="text" id="nombre" name="nombre" required> <!-- Campo de texto para el nombre -->
-            </div>
-            <div class="form-group"> <!-- Grupo de campos -->
-                <label for="apellido">Apellido:</label> <!-- Etiqueta para el campo de apellido -->
-                <input type="text" id="apellido" name="apellido" required> <!-- Campo de texto para el apellido -->
-            </div>
-            <div class="form-group"> <!-- Grupo de campos -->
-                <label for="email">Email:</label> <!-- Etiqueta para el campo de email -->
-                <input type="email" id="email" name="email" required> <!-- Campo de texto para el email -->
-            </div>
-            <div class="form-group"> <!-- Grupo de campos -->
-                <label for="localidad">Localidad:</label> <!-- Etiqueta para el campo de localidad -->
-                <input type="text" id="localidad" name="localidad" required> <!-- Campo de texto para la localidad -->
-            </div>
-            <div class="form-group"> <!-- Grupo de campos -->
-                <label for="mensaje">Mensaje:</label> <!-- Etiqueta para el campo de mensaje -->
-                <textarea id="mensaje" name="mensaje"></textarea> <!-- Área de texto para el mensaje -->
-            </div>
-            <div class="form-group"> <!-- Grupo de campos -->
-                <label for="motivo">Motivo de contacto:</label> <!-- Etiqueta para el campo de motivo de contacto -->
-                <select id="motivo" name="motivo" required>
-                    <!-- Lista desplegable para seleccionar el motivo de contacto -->
-                    <option value="">Selecciona un motivo</option>
-                    <option value="consulta">Consulta</option>
-                    <option value="solicitar_informacion">Solicitar Información</option>
-                </select>
-            </div>
-            <div class="form-group"> <!-- Grupo de campos -->
-                <label>¿Cómo se enteró de nosotros?</label><br> <!-- Etiqueta para el grupo de opciones -->
-                <input type="radio" id="web" name="web" value="paginas_web"> <!-- Opción para páginas web -->
-                <label for="web">Páginas Web</label><br>
-                <input type="radio" id="avisos" name="avisos" value="avisos_ocasion">
-                <!-- Opción para avisos de ocasión -->
-                <label for="avisos">Avisos de Ocasión</label><br>
-                <input type="radio" id="recomendaciones" name="recomendaciones" value="recomendaciones">
-                <!-- Opción para recomendaciones -->
-                <label for="recomendaciones">Recomendaciones</label><br>
-                <input type="radio" id="lugar" name="lugar" value="pase_por_el_lugar">
-                <!-- Opción para pase por el lugar -->
-                <label for="lugar">Pase por el Lugar</label><br>
-                <input type="radio" id="redes" name="redes" value="redes_sociales"> <!-- Opción para redes sociales -->
-                <label for="redes">Redes Sociales</label><br>
-            </div>
-            <div class="captcha"> <!-- Grupo de campos -->
-                <div class="g-recaptcha" data-sitekey="6Lf6fr0pAAAAAJ-mFUBjFR3jaf-VFazX1c8lGeB-"
-                    style="margin:auto; max-width:305px;"></div> <!-- Div para mostrar el reCAPTCHA -->
-            </div>
-            <div class="form-group"> <!-- Grupo de campos -->
-                <input type="submit" value="Enviar Datos"> <!-- Botón de envío del formulario -->
-            </div>
-            <script>
-                // Script para validar los campos obligatorios del formulario
-                document.getElementById('contact-form').addEventListener('submit', function (event) {
-                    var nombre = document.getElementById('nombre').value.trim();
-                    var apellido = document.getElementById('apellido').value.trim();
-                    var email = document.getElementById('email').value.trim();
-                    var localidad = document.getElementById('localidad').value.trim();
+    <main>
 
-                    if (nombre === '' || apellido === '' || email === '' || localidad === '') {
-                        alert('Por favor, complete todos los campos obligatorios.');
-                        event.preventDefault();
-                    }
-                });
-            </script>
-        </form>
-    </div>
+        <div class="form-container"> <!-- Contenedor del formulario de contacto -->
+            <h2>Contactanos ►☺</h2> <!-- Título del formulario -->
+            <form id="contact-form" method="post" action="#"> <!-- Formulario de contacto -->
+                <div class="form-group"> <!-- Grupo de campos -->
+                    <label for="nombre">Nombre:</label> <!-- Etiqueta para el campo de nombre -->
+                    <input type="text" id="nombre" name="nombre" required> <!-- Campo de texto para el nombre -->
+                </div>
+                <div class="form-group"> <!-- Grupo de campos -->
+                    <label for="apellido">Apellido:</label> <!-- Etiqueta para el campo de apellido -->
+                    <input type="text" id="apellido" name="apellido" required> <!-- Campo de texto para el apellido -->
+                </div>
+                <div class="form-group"> <!-- Grupo de campos -->
+                    <label for="email">email:</label> <!-- Etiqueta para el campo de email -->
+                    <input type="email" id="email" name="email" required> <!-- Campo de texto para el email -->
+                </div>
+                <div class="form-group"> <!-- Grupo de campos -->
+                    <label for="localidad">Localidad:</label> <!-- Etiqueta para el campo de localidad -->
+                    <input type="text" id="localidad" name="localidad" required>
+                    <!-- Campo de texto para la localidad -->
+                </div>
+                <div class="form-group"> <!-- Grupo de campos -->
+                    <label for="mensaje">Mensaje Opcional:</label> <!-- Etiqueta para el campo de mensaje -->
+                    <textarea id="mensaje" name="mensaje"></textarea> <!-- Área de texto para el mensaje -->
+                </div>
+                <div class="form-group"> <!-- Grupo de campos -->
+                    <label for="motivo">Motivo de contacto:</label>
+                    <!-- Etiqueta para el campo de motivo de contacto -->
+                    <select id="motivo" name="motivo" required>
+                        <!-- Lista desplegable para seleccionar el motivo de contacto -->
+                        <option value="">Selecciona un motivo</option>
+                        <option value="consulta">Consulta</option>
+                        <option value="solicitar_informacion">Solicitar Información</option>
+                    </select>
+                </div>
+                <div class="form-group"> <!-- Grupo de campos -->
+                    <label>¿Cómo se enteró de nosotros?</label><br> <!-- Etiqueta para el grupo de opciones -->
+                    <input type="radio" id="web" name="web" value="paginas_web"> <!-- Opción para páginas web -->
+                    <label for="web">Páginas Web</label><br>
+                    <input type="radio" id="avisos" name="avisos" value="avisos_ocasion">
+                    <!-- Opción para avisos de ocasión -->
+                    <label for="avisos">Avisos de Ocasión</label><br>
+                    <input type="radio" id="recomendaciones" name="recomendaciones" value="recomendaciones">
+                    <!-- Opción para recomendaciones -->
+                    <label for="recomendaciones">Recomendaciones</label><br>
+                    <input type="radio" id="lugar" name="lugar" value="pase_por_el_lugar">
+                    <!-- Opción para pase por el lugar -->
+                    <label for="lugar">Pase por el Lugar</label><br>
+                    <input type="radio" id="redes" name="redes" value="redes_sociales">
+                    <!-- Opción para redes sociales -->
+                    <label for="redes">Redes Sociales</label><br>
+                </div>
+                <div class="captcha"> <!-- Grupo de campos -->
+                    <div class="g-recaptcha" data-sitekey="6Lf6fr0pAAAAAJ-mFUBjFR3jaf-VFazX1c8lGeB-"
+                        style="margin:auto; max-width:305px;"></div> <!-- Div para mostrar el reCAPTCHA -->
+                </div>
+                <div class="form-group"> <!-- Grupo de campos -->
+                    <input type="submit" value="Enviar Datos"> <!-- Botón de envío del formulario -->
+                </div>
+                <script>
+                    // Script para validar los campos obligatorios del formulario
+                    document.getElementById('contact-form').addEventListener('submit', function (event) {
+                        var nombre = document.getElementById('nombre').value.trim();
+                        var apellido = document.getElementById('apellido').value.trim();
+                        var email = document.getElementById('email').value.trim();
+                        var localidad = document.getElementById('localidad').value.trim();
+
+                        if (nombre === '' || apellido === '' || email === '' || localidad === '') {
+                            alert('Por favor, complete todos los campos obligatorios.');
+                            event.preventDefault();
+                        }
+                    });
+                </script>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-item">
+            <h3>ENVÍOS A CABA Y GBA CONSULTA SI LLEGAMOS A TU ZONA</h3>
+            <p>Hacé tu pedido y te lo entregamos en 48HS </p>
+            <p>Horario de atención: Todos los días de 9 a 20:30 hs.</p>
+            <img src="./img/delivery.png" alt="Formas de envío" style="width: 310px;">
+            <p>Defensa de las y los consumidores. Para reclamos,ingresá<a
+                    href="https://autogestion.produccion.gob.ar/consumidores" target="_blank"> Acá</a>.</p>
+        </div>
+
+        <div class="footer-item">
+            <h3>SOBRE NOSOTROS</h3>
+            <p>Nuestra empresa consiste en la elaboración y venta de tortas pasteles,sandwicheria y mucho más:
+                Está conformada por un grupo de personas con un solo objetivo…hacer cosas ricas.
+                Cada día nos esforzamos por hacer productos caseros y de gran calidad, los cuales hacen la diferencia
+                que
+                nuestros clientes prefieren.
+                Ofrecemos calidad y cariño en cada producto que elaboramos.Todo nuestros productos de pastelería son
+                artesanales
+                y, al tratarse de alimentos, no se aceptan cambios ni
+                devoluciones.<br>En caso de que tengas un error en tu pedido escribinos a <a>
+                    info.pasteleriaartesalhoochgala@gmail.com</a> para encontrar una solución lo antes
+                posible.</p>
+        </div>
+        <!-- Contenido del footer -->
+        <div class="footer-item">
+            <h3>PAGA COMO QUIERAS</h3>
+            <p>Tus datos siempre protegidos</p>
+            <img src="./img/tarjetas2.png" alt="MediosdePago">
+            <hr>
+
+            <h2>Síguenos en nuestras redes sociales</h2>
+            <a href="https://www.facebook.com/profile.php?id=61559249051197">
+                <img src="./img/facebook_5968764.png" alt="facebook">
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61559249051197">
+                <img src="./img/instagram_2111463.png" alt="instagram">
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61559249051197">
+                <img src="./img/twitter_5969020.png" alt="twitter">
+            </a>
+        </div>
+
+        <div class="map">
+            <h3>ENCONTRANOS AQUI</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.599056082831!2d-58.39766452339284!3d-34.589010356723065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca987d053485%3A0x4a4df37528573659!2sAv.%20Gral.%20Las%20Heras%202129%2C%20C1127%20AAD%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1715134540013!5m2!1ses-419!2sar"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+        &copy; 2024 Pastelería Artesanal Hooch Gala / Todos los derechos reservados
+    </footer>
 </body>
 
 </html>

@@ -57,8 +57,8 @@ textarea {
 
 /* Estilos para el botón de enviar */
 input[type="submit"] {
-    padding: 10px 30px; /* Espaciado interno del botón */
-    background-color: rgb(208, 71, 208); /* Color de fondo del botón */
+    padding: 10px 60px; /* Espaciado interno del botón */
+    background-color:rgb(77, 43, 202); /* Color de fondo del botón */
     color: white; /* Color del texto del botón */
     border: none; /* Sin borde */
     border-radius: 3px; /* Radio de borde para bordes redondeados */
@@ -67,7 +67,7 @@ input[type="submit"] {
 
 /* Estilos para el botón de enviar al pasar el mouse */
 input[type="submit"]:hover {
-    background-color: #0056b3; /* Cambio de color de fondo */
+    background-color: rgb(208, 71, 208); /* Cambio de color de fondo */
 }
 
 /* Estilos para mensajes de error */
@@ -149,4 +149,48 @@ input[type="submit"]:hover {
   /* Mostrar el menú cuando el checkbox está marcado */
   #check:checked ~ .menu {
     right: 0;
+  }
+
+  /* Estilos para el footer */
+  footer {
+    background-color: #D9CBA3;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas */
+    grid-template-rows: auto;
+    /* Altura automática */
+    gap: 60px;
+    /* Espacio entre elementos */
+  }
+  
+  /* Estilos para cada elemento del footer */
+  .footer-item {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Color blanco con 70% de opacidad */
+    border-radius: 10px;
+  }
+  
+  /* Estilos para ls seccion de mapa en el  footer */
+  .map {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Color blanco con 70% de opacidad */
+    border-radius: 10px;
+  }
+  
+  
+  /* Estilos para el texto de derechos reservados */
+  .footer-copyright {
+    text-align: center;
+    grid-column: 1 / span 4;
+    /* Ocupa las 4 columnas */
+    grid-row: 2;
+    /* Está en la segunda fila */
+    background-color: #ffcc54;
+    border: 1px solid #dddddd;
+    padding: 10px;
   }
